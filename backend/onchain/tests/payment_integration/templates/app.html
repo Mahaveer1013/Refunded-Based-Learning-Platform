@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Razorpay Payment</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script> <!-- Razorpay script -->
+</head>
+
+<body>
+
+    <h2>Pay with Razorpay</h2>
+
+    <!-- Payment Form -->
+    <form id="payment-form" action="/charge" method="POST">
+        <input type="hidden" id="razorpay_payment_id" name="razorpay_payment_id">
+        <button type="button" id="pay-btn">Pay Now</button>
+    </form>
+
+    <script>
+        var options = {
+            "key": "rzp_test_Q9P2EdVpOEFDI9", // Razorpay API Key
+            "amount": "100", // Amount in paise (INR 1.00)
+            "currency": "INR",
+            "name": "Your Company",
+            "description": "Purchase Description",
+            "image": "vk.jpg",
+            "handler": function (response) {
+                console.log("✅ Payment ID:", response.razorpay_payment_id);
+
+                // Store payment ID in the form input
+                document.getElementById("razorpay_payment_id").value = response.razorpay_payment_id;
+
+                // Submit the form
+                document.getElementById("payment-form").submit();
+            },
+            "prefill": {
+                "name": "PEC Devs",
+                "email": "ngpanimalar@gmail.com",
+                "contact": "9999999999"
+            },
+            "notes": {
+                "shopping_order_id": "21"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+
+        var rzp1 = new Razorpay(options);
+
+        // Open Razorpay checkout when "Pay Now" button is clicked
+        document.getElementById('pay-btn').onclick = function (e) {
+            rzp1.open();
+            e.preventDefault();
+        };
+    </script>
+
+</body>
+
+</html>
