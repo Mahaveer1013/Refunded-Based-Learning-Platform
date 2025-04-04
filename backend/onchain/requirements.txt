@@ -1,0 +1,11 @@
+fastapi
+web3
+pydantic
+uvicorn
+python-dotenv
+youtube_transcript_api
+openai==0.28
+passlib
+typing
+bcrypt
+pydantic-settings

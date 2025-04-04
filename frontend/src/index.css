@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #4f46e5;
+  /* Primary brand color */
+  --color-primary-light: #6366f1;
+  /* Lighter primary */
+  --color-primary-dark: #4338ca;
+  /* Darker primary */
+  --color-secondary: #f9fafb;
+  /* Background color */
+  --color-accent: #10b981;
+  /* Accent color */
+  --color-text: #111827;
+  /* Main text color */
+  --color-text-light: #6b7280;
+  /* Secondary text */
+  --color-border: #373b42;
+  /* Border color */
+  --color-error: #ef4444;
+  /* Error messages */
+  --color-success: #10b981;
+  /* Success messages */
+  --color-warning: #f59e0b;
+  /* Warning color */
+
+  /* Shadow variables */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}

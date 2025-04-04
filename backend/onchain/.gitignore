@@ -1,0 +1,56 @@
+# Environment Variables
+.env
+
+# Byte-compiled / Cached files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Logs and Debug Files
+logs/
+*.log
+
+# Virtual Environment
+.venv
+venv
+.env/
+.envrc
+*.egg-info/
+
+# Python dependency manager
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Database & Migrations
+migrations/
+*.sqlite3
+*.db
+
+# Jupyter Notebook Checkpoints (if using notebooks)
+.ipynb_checkpoints/
+
+# AI Model Files (large files should be stored elsewhere)
+ai_models/models/
+ai_models/*.h5
+ai_models/*.pth
+ai_models/*.pkl
+ai_models/*.onnx
+
+# Blockchain-related Files
+blockchain/contract/*.json
+blockchain/contract/*.sol
+wallets/
+keystore/
+blockchain/wallet.json
+
+# Docker
+docker-compose.override.yml
+*.dockerfile
+
+# VS Code settings
+.vscode/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
