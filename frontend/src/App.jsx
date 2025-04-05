@@ -69,7 +69,8 @@ const App = () => {
           <Route path="/login" element={<CheckNonAuth><LoginPage /></CheckNonAuth>} />
           <Route path="/forgot-password" element={<CheckNonAuth><ForgotPasswordPage /></CheckNonAuth>} />
           <Route path="/reset-password" element={<CheckNonAuth><ResetPassword /></CheckNonAuth>} />
-          <Route path="/" element={<CheckAuth><DashboardPage /></CheckAuth>} >
+          <Route path="/" element={<DashboardPage />} >
+          {/* <Route path="/" element={<CheckAuth><DashboardPage /></CheckAuth>} > */}
             <Route index element={<Overview />} />
             <Route path="payments" element={<Payments />} />
             <Route path="progress" element={<Progress />} />

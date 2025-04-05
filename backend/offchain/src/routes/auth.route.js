@@ -1,22 +1,23 @@
-const express = require('express');
+import express from 'express';
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+import { body, validationResult } from 'express-validator';
+import authMiddleware from '../middleware/authMiddleware';
+import User from '../models/User';
+import TokenBlacklist from '../models/TokenBlacklist';
+import { sendPasswordResetEmail } from '../services/emailService';
+import { SECRET_KEY, TOKEN_EXPIRE_MINUTES } from '../utils/constants';
+
 const router = express.Router();
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-const { body, validationResult } = require('express-validator');
-const authMiddleware = require('../middleware/authMiddleware');
-const User = require('../models/User');
-const TokenBlacklist = require('../models/TokenBlacklist');
-const { sendPasswordResetEmail } = require('../services/emailService');
-require('dotenv').config();
 
 // Helper functions
-const generateTokens = (userId) => {
-  const accessToken = jwt.sign(
+const generateToken = (userId) => {
+  const token = jwt.sign(
     { sub: userId },
-    process.env.JWT_SECRET,
-    { expiresIn: process.env.ACCESS_TOKEN_EXPIRE_MINUTES + 'm' }
+    SECRET_KEY,
+    { expiresIn: TOKEN_EXPIRE_MINUTES + 'm' }
   );
-  return { access_token: accessToken, token_type: 'bearer' };
+  return { token: token, token_type: 'bearer' };
 };
 
 // Register route
@@ -95,7 +96,7 @@ router.post('/login', async (req, res) => {
     }
     
     // Generate tokens
-    const tokens = generateTokens(user._id);
+    const tokens = generateToken(user._id);
     
     // Update last login
     user.last_login = new Date();

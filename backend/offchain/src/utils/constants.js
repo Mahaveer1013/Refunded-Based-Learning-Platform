@@ -15,3 +15,7 @@ export const SMTP_PASSWORD = process.env.SMTP_PASSWORD;
 export const SMTP_SERVER = process.env.SMTP_SERVER;
 export const SMTP_PORT = process.env.SMTP_PORT;
 export const FRONTEND_URL = process.env.FRONTEND_URL;
+
+export const ALGORITHM = "HS256";
+export const TOKEN_EXPIRE_MINUTES = 60000;
+export const PASSWORD_RESET_TOKEN_EXPIRE_MINUTES = 300;
