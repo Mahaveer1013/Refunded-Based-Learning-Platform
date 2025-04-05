@@ -123,13 +123,11 @@ This adds a layer of abstraction and security.
 
 ## 📷 Screenshots
 
-```markdown
 ![Application Screenshot](./assets/page_1.png)
 ![Application Screenshot](./assets/page_2.png)
 ![Application Screenshot](./assets/page_3.png)
 ![Application Screenshot](./assets/page_4.png)
 ![Application Screenshot](./assets/page_5.png)
-```
 
 ---
 
