@@ -22,6 +22,6 @@ class Settings(BaseSettings):
     SMTP_PORT: int = int(os.getenv("SMTP_PORT", 587))
     FRONTEND_URL: str = os.getenv("FRONTEND_URL", "http://localhost:5173")
     MONGODB_URI: str = os.getenv("MONGODB_URI", "mongodb://localhost:27017")
-    MONGODB_NAME: str = os.getenv("MONGODB_NAME", "refunded_learning_platform")
+    MONGODB_NAME: str = os.getenv("MONGODB_NAME", "refunded_based_learning")
 
 settings = Settings()

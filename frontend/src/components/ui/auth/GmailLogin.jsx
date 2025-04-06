@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import LoginForm from '../../auth/LoginForm';
 import RegisterForm from '../../auth/RegisterForm';
 
-const GmailLogin = ({ isLogin }) => {
+const GmailLogin = ({ isLogin, setIsLogin }) => {
     const [authError, setAuthError] = useState('');
+
+    const handleLoginChange = () => {
+        setIsLogin(prev => !prev);
+
+    }
 
     return (
         <>
@@ -13,8 +18,8 @@ const GmailLogin = ({ isLogin }) => {
                 </div>
             )}
             {isLogin
-                ? <LoginForm setAuthError={setAuthError} />
-                : <RegisterForm setAuthError={setAuthError} />}
+                ? <LoginForm setAuthError={setAuthError} handleLoginChange={handleLoginChange} />
+                : <RegisterForm setAuthError={setAuthError} handleLoginChange={handleLoginChange} />}
         </>
     );
 };

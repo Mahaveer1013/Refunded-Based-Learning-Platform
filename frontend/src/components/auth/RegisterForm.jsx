@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import openApi from '../api/openApi';
 
-const RegisterForm = ({ setAuthError }) => {
+const RegisterForm = ({ setAuthError, handleLoginChange }) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -235,9 +235,9 @@ const RegisterForm = ({ setAuthError }) => {
 
       <div className="text-center text-sm text-gray-600">
         Already have an account?{' '}
-        <Link to="/login" className="font-medium text-indigo-600 hover:text-indigo-500">
+        <div onClick={handleLoginChange} className="font-medium text-indigo-600 hover:text-indigo-500">
           Sign in
-        </Link>
+        </div>
       </div>
     </div>
   );

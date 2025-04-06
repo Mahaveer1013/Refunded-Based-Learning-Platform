@@ -1,0 +1,20 @@
+[
+    {
+      "inputs": [
+        { "internalType": "address", "name": "user", "type": "address" },
+        { "internalType": "uint256", "name": "amount", "type": "uint256" },
+        { "internalType": "string", "name": "paymentId", "type": "string" },
+        { "internalType": "uint8", "name": "txnType", "type": "uint8" },
+        { "internalType": "string", "name": "referenceId", "type": "string" },
+        { "internalType": "uint8", "name": "status", "type": "uint8" },
+        { "internalType": "uint256", "name": "refundedAmount", "type": "uint256" },
+        { "internalType": "address", "name": "refundFrom", "type": "address" },
+        { "internalType": "string", "name": "notes", "type": "string" }
+      ],
+      "name": "recordTransaction",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ]
+  

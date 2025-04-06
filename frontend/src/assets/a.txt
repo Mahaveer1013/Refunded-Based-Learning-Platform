@@ -1,0 +1,40 @@
+
+1. user login 
+
+2. will have 100 default credits
+
+3. can learn any 5 courses with that credits
+
+4. on completing the modules, credits will be refunded
+
+5. further credits can be recharged by completing payments
+
+6. can challenge themselves on with paid credits for courses
+
+7. if they haven't completed the course before the deadline, the course will be closed and the remaining amount will be used for financially struggling people through proper verification and validation
+
+8. every transaction will be stored in blockchain permanently
+
+9. for security purpose, blockchain is deployed in a separate Fast-API server which can be communicated only via my Node JS server, preventing injection attacks and many more.
+
+10. there will be a lot of sample tests available for their self evaluation. AI will help them analysing the mistakes done in those sample tests
+
+11. once they are ready for the final test,
+
+12. they can start their fully proctored AI based test assessment which defined the amount to be refunded,
+
+13. test marks:
+	<80% - refund amount will be decreased according to the mark
+	>80% and <90% - 10% fee for blockchain based credential certification (if needed) else 100% will be refunded
+	>90% - blockchain based credential certification and 100% will be refunded
+
+
+14. community chat or course review by previous byers, 
+
+15. full fledged AI model specially trained to get the best resources online, according to user needs
+
+16. group challenge (without ranking, to avoid rushing or cheating)
+
+17. the blockchain will have a credential, through which the certification can be verified whenever needed
+
+19. in the verification page, we can start a temporary test whenever needed, to know how updated the user was, with that specific skill.. (can be used during interview for trusted verification)

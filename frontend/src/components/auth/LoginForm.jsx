@@ -4,7 +4,7 @@ import { AppContext } from '../../utils/Context';
 import openApi from '../api/openApi';
 import { storeToken } from '../../utils/auth';
 
-const LoginForm = ({ setAuthError }) => {
+const LoginForm = ({ setAuthError, handleLoginChange }) => {
   const { setIsAuthenticated } = useContext(AppContext);
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [errors, setErrors] = useState({});
@@ -131,9 +131,9 @@ const LoginForm = ({ setAuthError }) => {
 
       <div className="text-center text-sm text-gray-600">
         Don't have an account?{' '}
-        <Link to="/register" className="font-medium text-indigo-600 hover:text-indigo-500">
+        <div onClick={handleLoginChange} className="font-medium text-indigo-600 hover:text-indigo-500">
           Sign up
-        </Link>
+        </div>
       </div>
     </div>
   );
